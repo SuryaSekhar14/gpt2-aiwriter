@@ -11,4 +11,4 @@ python3 manage.py runserver
 To-Do:
 Improve CSS
 Remove extra JS
-Clean HTML
+Clean HTML 
