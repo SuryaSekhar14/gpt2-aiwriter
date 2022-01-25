@@ -9,6 +9,6 @@ python3 mapp.py
 ```
 
 To-Do:
-[ ] Change Frontend to React.js
-[ ] Implement User Accounts using Firebase in React.js
+- [ ] Change Frontend to React.js
+- [ ] Implement User Accounts using Firebase in React.js
 
