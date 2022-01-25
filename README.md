@@ -2,7 +2,7 @@
 
 AI Writer takes in inputs, and outputs a fuly written blog post.
 
-Note: The GPT-2 Model Binary file is not uploaded to GitHub, so the code will not work if cloned. 
+**Note:** The GPT-2 Model Binary file is not uploaded to GitHub, so the code will not work if cloned. 
 
 ** **
 
