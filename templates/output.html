@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&family=Source+Code+Pro:ital,wght@0,900;1,500&display=swap" rel="stylesheet">
-<!-- CSS only -->
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
 </head>
 
 <body class="bodyclass">
@@ -20,7 +18,7 @@
     
     <form class="outputpage">
         <div class="lablediv"><label class="lableclass">YOUR GENERATED OUTPUT </label></div>
-        <div class="textdiv"><textarea rows="9" cols="70" name="comment" form="usrform" class="textareaclass"> {{ai_output}} </textarea> </div>
+        <div class="textdiv"><textarea rows="9" cols="70" name="comment" form="usrform" class="textareaclass"> {{data}}  {{email}} </textarea> </div>
         <div class="butttondiv">
         <button class="btn btn-outline-light">GO BACK</button>
         <button class="btn btn-outline-light">SOMETHING </button>
@@ -29,31 +27,26 @@
     
 </div>
 
-<!-- ======= Footer ======= -->
+
 <footer id="footer">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>IEMA R&D </span></strong>. All Rights Reserved
-      </div>
       <div class="credits">
-        Designed by <a href="https://www.iemlabs.com/">IEMA Research & Development Private Limited</a>
+        Designed by Surya Sekhar Datta
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer>
 
 </body>
-<!-- JavaScript Bundle with Popper -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
 
-
-
-
-
-<!--{{mehhh}}
+<!-- {{data}}
+<br>
+{{email}}
 
 <br>
-<a href="about">
+<a href="/">
     <button >
         Go back
     </button>

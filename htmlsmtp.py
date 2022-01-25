@@ -351,24 +351,18 @@ def sendhtmlmail():
 
     subject = testcall.emailsub()
     sender= "surya.noreply2@gmail.com"
-    #reciever = "amartya.mukherjee@iemcal.com"
-    #reciever1 = "ayan.panja@iemcal.com"
-    #reciever2 = "rishit.chakraborty@iemlabs.com"
-    reciever3 = "suryasekhardatta22@gmail.com"
-    #reciever4 = "ganguly.ishika01@gmail.com"
+
+    reciever = "suryasekhardatta22@gmail.com"
 
     password = "Surya.Noreply"
 
     msg['Subject'] = subject
     msg['From'] = sender
-    msg['To'] = reciever3
+    msg['To'] = reciever
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(sender, password)
-        #server.sendmail(sender, reciever, msg.as_string())
-        #server.sendmail(sender, reciever1, msg.as_string())
-        #server.sendmail(sender, reciever2, msg.as_string())
-        server.sendmail(sender, reciever3, msg.as_string())
-        #server.sendmail(sender, reciever4, msg.as_string())
+        server.sendmail(sender, reciever, msg.as_string())
+
 

@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,22 +10,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.js' %}" rel="icon">
-  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
+  <link href="{{ url_for('static', filename='/img/favicon.png')}}" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -43,7 +41,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="index">Home</a></li>
-          <li><a href="about">AI</a></li>
+          <li><a href="ai">AI</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -59,12 +57,12 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-      <h1>AI Writter write yours</h1>
-      <div class="container">
+      <h1>AI Writer write yours Blogs and Stories for you</h1>
+      <!-- <div class="container">
         <p id="typewriter" data-typewriter=" BLOG, Story, Essay, Entrepreneur Story"></p><span class="blinking-cursor">|</span>
-      </div>
+      </div> -->
       <div>
-        <div class="ibutton"><a href="about"><button  id="indexbutton"class="btn btn-secondary">GET STARTED</button></a></div>
+        <div class="ibutton"><a href="ai"><button  id="indexbutton"class="btn btn-secondary">GET STARTED</button></a></div>
       </div>
      <!---- <h2>A Way To Change The World. Provide The Inputs, AI Writes The Blog. <br> Its That Simple.</h2>
       <a href="about" class="btn-about">Go to AI</a>
@@ -75,17 +73,12 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>IEM Labs</span></strong>. All Rights Reserved
-      </div>
       <div class="credits">
-        Designed by <a href="https://www.iemlabs.com/">IEMA Research & Development Private Limited</a>
+        Designed by Surya Sekhar Datta</a>
       </div>
     </div>
     <div class="footer-social-links">
-      <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="github"><i class="bi bi-github"></i></i></a>
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
     </div>
   </footer><!-- End  Footer -->
@@ -94,17 +87,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{{ url_for('static', filename='/vendor/aos/aos.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/purecounter/purecounter.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/waypoints/noframework.waypoints.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{{ url_for('static', filename='/js/main.js')}}"></script>
   <script>
    var typewriter = function(txt) {
     var container = document.getElementById('typewriter'),

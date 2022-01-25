@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{{ url_for('static', filename='/img/favicon.png')}}" rel="icon">
+  <link href="{{ url_for('static', filename='/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -21,15 +19,15 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='/css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -45,7 +43,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index">Home</a></li>
-          <li><a class="active" href="about">AI</a></li>
+          <li><a class="active" href="ai">AI</a></li>
           <!-- <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -55,9 +53,7 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="github"><i class="bi bi-github"></i></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
@@ -70,30 +66,26 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 class="bodytext"> AI Model</h2>
-          <div class="paratext">We do the Work, so you don't have to. </div>
+          <h2 class="bodytext"> AI Writer</h2>
+          <div class="paratext">
+            We do the Work, so you don't have to. <br>
+            Please provide your input, so that we can generate the blog.
+          </div>
         </div>
 
-        <form id='form' method="POST" action="output">
-          {% csrf_token %}
-          <textarea id='ai-input' name="text" rows=10 columns=20></textarea>
-          <div id="manage-button">
-          <button type="button" class="buttontext" class="btn btn-outline-danger"> something</button>
-          <button type="button" class="buttontext" class="btn btn-outline-danger"> something</button>
-          <button type="button" class="buttontext" class="btn btn-outline-danger"> something</button>
-        </div>
-       <div class="submitbutton"><button type="submit" class="btn btn-outline-warning" >submit </button></div> 
+        <form id='form' method="POST" action="/output">
+          <input autofocus required class="form-control" id="exampleFormControlTextarea1" style="width: 55%; align-items: center;" placeholder="Please provide your input" rows="6" name="data">
+          <br>
+          <input required type="email" class="form-control" id="exampleFormControlInput1" style="width: 55%; align-items: center;" placeholder="Please provide your E-Mail" name="email">
+       <div class="submitbutton"><button type="submit" class="btn btn-success" >Submit </button></div> 
         </form>
   </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>IEMA R&D </span></strong>. All Rights Reserved
-      </div>
       <div class="credits">
-        Designed by <a href="https://www.iemlabs.com/">IEMA Research & Development Private Limited</a>
+        Designed by Surya Sekhar Datta</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
@@ -103,17 +95,17 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'assets/vendor/purecounter/purecounter.j' %}s"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{{ url_for('static', filename='/vendor/aos/aos.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/purecounter/purecounter.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='/vendor/waypoints/noframework.waypoints.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{{ url_for('static', filename='/js/main.js')}}"></script>
 
 </body>
 

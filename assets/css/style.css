@@ -586,11 +586,14 @@ p, span{
 
 #ai-input{
   align-content: center;
+  overflow-y: auto;
+  border-radius: 10px;
 }
 
 textarea {
   margin: auto;
   display: block;
+  overflow-y: auto;
 }
 
 #submit-btn{
@@ -659,7 +662,7 @@ textarea {
 .bodytext{
   color: #051a17;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 69px;
   height: 100px;
   font-weight: bold;
 
@@ -667,10 +670,11 @@ textarea {
 
 .paratext{
   color: #051a17;
-  font-size: 35px;
-  justify-content: center;
-  padding-left: 350px;
-  padding-top: 70px;
+  font-size: 30px;
+  text-align: center;
+  /* justify-content: center;
+  padding-left: 350px; */
+  padding-top: 45px;
   padding-bottom: 50px;
   }
 
