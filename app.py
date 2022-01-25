@@ -1,7 +1,5 @@
 from django.shortcuts import redirect
 from flask import Flask, render_template, request, url_for, jsonify
-from flask_restful import Resource, Api
-from matplotlib.pyplot import get
 
 app = Flask(__name__,
             static_url_path='', 
