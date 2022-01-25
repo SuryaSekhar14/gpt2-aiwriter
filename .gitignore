@@ -1,4 +1,4 @@
-#Import SQLite Database
+#Ignore SQLite Database
 db.sqlite3
 
 #Ignore Test scripts
@@ -7,3 +7,4 @@ apitest2.py
 
 #Ignore GPT2 Files
 GPT2_Pytorch_From_scratch
+
