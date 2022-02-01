@@ -1,4 +1,4 @@
-# AI Writer 
+# AI Writer  
 
 AI Writer takes in inputs, and outputs a fuly written blog post.
 
