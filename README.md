@@ -18,4 +18,4 @@ To-Do:
 - [ ] Change Frontend to React.js
 - [ ] Implement User Accounts using Firebase in React.js
 - [ ] Refactor Flask App Code
-
+- [ ] Improve the AI Model (Just being honest here *ahem*  it's not really good right now *ahem*)
