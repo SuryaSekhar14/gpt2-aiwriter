@@ -1,6 +1,7 @@
 from django.shortcuts import redirect
 from flask import Flask, render_template, request, url_for, jsonify
 from GPT2_Pytorch_From_scratch import testcall
+import htmlsmtp
 
 app = Flask(__name__,
             static_url_path='', 
@@ -22,7 +23,8 @@ def output():
         data = request.form.get('data')
         email = request.form.get('email')
         out = testcall.aicall(data)
-        return render_template('output.html', data=out, email=email)
+        htmlsmtp.sendhtmlmail(email)
+        return render_template('output.html')  #, data=out, email=email
     else:
         return redirect("/ai", code=307)
 
