@@ -1,5 +1,7 @@
-#Ignore SQLite Database
+#Ignore Private Files
+.env
 db.sqlite3
+__pycache__
 
 #Ignore Test scripts
 apitest.py

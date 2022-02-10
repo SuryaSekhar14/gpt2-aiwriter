@@ -2,7 +2,11 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from GPT2_Pytorch_From_scratch import testcall
 from numpy import datetime_data  
-from jinja2 import Environment        
+from jinja2 import Environment   
+from dotenv import load_dotenv
+import os
+
+load_dotenv()     
 
 def sendhtmlmail(emaill):
   
@@ -297,13 +301,13 @@ def sendhtmlmail(emaill):
     )
 
     subject = testcall.emailsub()
-    sender= "surya.noreply2@gmail.com"
+    sender= os.getenv('EMAIL_USER')
     reciever = emaill
 
-    password = "Surya.Noreply"
+    password = os.getenv('EMAIL_PASSWORD')
 
     msg['Subject'] = subject
-    msg['From'] = sender
+    msg['From'] = "Surya Sekhar Datta"
     msg['To'] = reciever
 
     context = ssl.create_default_context()
