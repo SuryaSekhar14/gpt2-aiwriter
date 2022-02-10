@@ -200,6 +200,8 @@ def sendhtmlmail(emaill):
       </div>
         <br>
         {{output}}           <!--   OUTPUT   -->
+        <br><br><br>
+        <b>NOTE:</b> This is an AI Generated email, still being worked on, so the output may not be accurate, or not even close to the input. Please do not reply to this email. 
           </td>
         </tr>
       </tbody>
